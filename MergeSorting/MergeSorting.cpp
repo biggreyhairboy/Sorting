@@ -24,17 +24,25 @@ void main()
 	getchar();
 }
 
-int* MergeSorting(int *arr, int LeftFlag, int RightFlag){
-	if (LeftFlag >= 2){
-		int SubLeftLeftFlag = LeftFlag / 2;
-		int SubRightLeftFlag = LeftFlag - LeftFlag / 2;
-		int SubLeftRightFlag = RightFlag / 2;
-		int SubRightRightFlag = RightFlag - RightFlag / 2;
-		MergeSorting(arr, SubLeftLeftFlag, SubLeftRightFlag);
-		MergeSorting(arr + LeftFlag, SubRightLeftFlag, SubRightRightFlag);
+int* MergeSorting(int *arr, int begin, int flag, int end){
+	if((flag - begin) == 1 && (end - flag) == 1){
+		if (arr[begin] > arr[end]){
+			Exchange(arr[begin], arr[end]);
+		}
+		return arr;
 	}
-	else {
-		if ()
+	else if ((flag - begin) == 0 && (end - flag) ==1) {
+		return arr;
+	}
+	else{// definite position of the array memeber
+		int leftbegin = begin;
+		int leftflag = begin / 2;
+		int leftend = begin - leftflag;
+		int rightbegin = flag;
+		int rightflag = flag + (end - flag) / 2;
+		int rightend = end;
+		MergeSorting(arr, leftbegin, leftflag, leftend);
+		MergeSorting(arr, rightbegin, rightflag, rightend);
 	}
 }
 
