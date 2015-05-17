@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sorting", "Sorting\Sorting.vcxproj", "{20013EC5-8471-4C84-A1DB-42F733B0FA8C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MergeSorting", "MergeSorting\MergeSorting.vcxproj", "{6784917B-9C99-4CD5-B33D-3C06A196D26C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility", "Utility\Utility.vcxproj", "{073F332B-BF0E-475F-9434-BE0D3280834B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +19,14 @@ Global
 		{20013EC5-8471-4C84-A1DB-42F733B0FA8C}.Debug|Win32.Build.0 = Debug|Win32
 		{20013EC5-8471-4C84-A1DB-42F733B0FA8C}.Release|Win32.ActiveCfg = Release|Win32
 		{20013EC5-8471-4C84-A1DB-42F733B0FA8C}.Release|Win32.Build.0 = Release|Win32
+		{6784917B-9C99-4CD5-B33D-3C06A196D26C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6784917B-9C99-4CD5-B33D-3C06A196D26C}.Debug|Win32.Build.0 = Debug|Win32
+		{6784917B-9C99-4CD5-B33D-3C06A196D26C}.Release|Win32.ActiveCfg = Release|Win32
+		{6784917B-9C99-4CD5-B33D-3C06A196D26C}.Release|Win32.Build.0 = Release|Win32
+		{073F332B-BF0E-475F-9434-BE0D3280834B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{073F332B-BF0E-475F-9434-BE0D3280834B}.Debug|Win32.Build.0 = Debug|Win32
+		{073F332B-BF0E-475F-9434-BE0D3280834B}.Release|Win32.ActiveCfg = Release|Win32
+		{073F332B-BF0E-475F-9434-BE0D3280834B}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

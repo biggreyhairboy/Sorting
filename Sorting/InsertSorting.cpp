@@ -4,7 +4,7 @@
 //TODO: template insert sorting for most types
 
 #include <iostream>
-
+#define GET_ARRAY_LEN(array, len){len = sizeof(array) / sizeof(array[0]);}
 using namespace std;
 int * InsertionSorting(int arr[], int length);
 void PrintArray(int arr[], int lenght);
@@ -12,6 +12,10 @@ void PrintArray(int arr[], int lenght);
 void main()
 {
 	int iarr[] = { 24, 43, 22, 1, 7, 9, 99, 0 };
+	int len = sizeof(iarr) / sizeof(iarr[0]);
+	int length;
+	GET_ARRAY_LEN(iarr, length);
+	cout << length;
 	InsertionSorting(iarr, 8);
 	PrintArray(iarr, 8);
 	getchar();
