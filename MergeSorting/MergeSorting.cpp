@@ -13,6 +13,8 @@ using namespace std;
 using namespace Utility;
 void Exchange(int &a, int &b);
 
+
+void copyArrayToAnother(int * SourceArray, int BeginPosition, int EndPostion, int* DestArray);
 int * MergeSorting(int *arr, int LeftFlag, int flag, int RightFlag);
 Printer pr;
 
@@ -56,7 +58,7 @@ void MergSorting(int* arr, int begin, int flag, int end){
 	int *RightArray = new int[RightLen];
 	copyArrayToAnother(arr, begin, flag, LeftArray);
 	copyArrayToAnother(arr, flag, end, RightArray);
-
+	int xxx = 0;
 }
 void Exchange(int &a, int &b){
 	int tmp = 0;
