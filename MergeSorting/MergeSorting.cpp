@@ -8,30 +8,33 @@
 #include <iostream>
 #include "..\\Utility\\Utility.h"
 
+
 using namespace std;
 using namespace Utility;
+void Exchange(int &a, int &b);
 
-int * MergeSorting(int *arr, int LeftFlag, int RightFlag);
+int * MergeSorting(int *arr, int LeftFlag, int flag, int RightFlag);
+Printer pr;
 
+int len;
 void main()
 {
 	cout << "hi there!" << endl;
 	int iarr[] = { 9, 2, 3, 1, 0, 8, 19 };
-	double darr[] = { 238.3, 12.0, 12, 99, 10, 9999.9 };
-	Printer pr;
-	pr.PrintArray(iarr, 7);
-	pr.PrintArray(darr, 6);
+	pr.PrintArray(iarr);
+	MergeSorting(iarr, 0, 3, 6);
 	getchar();
 }
 
 int* MergeSorting(int *arr, int begin, int flag, int end){
+	
 	if((flag - begin) == 1 && (end - flag) == 1){
 		if (arr[begin] > arr[end]){
 			Exchange(arr[begin], arr[end]);
 		}
 		return arr;
-	}
-	else if ((flag - begin) == 0 && (end - flag) ==1) {
+	} 
+	else if ((flag - begin) == 1 && (end - flag) ==0) {
 		return arr;
 	}
 	else{// definite position of the array memeber
