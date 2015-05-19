@@ -8,17 +8,16 @@
 #include <iostream>
 #include "..\\Utility\\Utility.h"
 #define GET_ARRAY_LEN(arr, len){sizeof(arr) / sizeof(arr[0]);}
+void Exchange(int &a, int &b);
+void copyArrayToAnother(int * SourceArray, int BeginPosition, int EndPostion, int* DestArray);
+void MergeSorting(int *arr, int LeftFlag, int flag, int RightFlag);
 
 using namespace std;
 using namespace Utility;
-void Exchange(int &a, int &b);
 
-
-void copyArrayToAnother(int * SourceArray, int BeginPosition, int EndPostion, int* DestArray);
-int * MergeSorting(int *arr, int LeftFlag, int flag, int RightFlag);
 Printer pr;
-
 int len;
+
 void main()
 {
 	cout << "hi there!" << endl;
@@ -50,14 +49,15 @@ void main()
 //		MergeSorting(arr, rightbegin, rightflag, rightend);
 //	}
 //}
-void MergSorting(int* arr, int begin, int flag, int end){
+void MergeSorting(int* arr, int begin, int flag, int end){
 	//flag = (end + begin) / 2
 	int LeftLen = flag - begin + 1;
 	int RightLen = end - flag;
 	int *LeftArray = new int[LeftLen];
 	int *RightArray = new int[RightLen];
 	copyArrayToAnother(arr, begin, flag, LeftArray);
-	copyArrayToAnother(arr, flag, end, RightArray);
+	copyArrayToAnother(arr, flag + 1, end, RightArray);
+	
 	int xxx = 0;
 }
 void Exchange(int &a, int &b){
