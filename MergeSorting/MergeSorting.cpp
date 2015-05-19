@@ -57,8 +57,17 @@ void MergeSorting(int* arr, int begin, int flag, int end){
 	int *RightArray = new int[RightLen];
 	copyArrayToAnother(arr, begin, flag, LeftArray);
 	copyArrayToAnother(arr, flag + 1, end, RightArray);
-	
-	int xxx = 0;
+	int i = 1, j = 1;
+	for (int k = begin; k < end; k++){
+		if (LeftArray[i] <= RightArray[j]){
+			arr[k] = LeftArray[i];
+			i++;
+		}
+		else {
+			arr[k] = RightArray[j];
+			j++;
+		}
+	}
 }
 void Exchange(int &a, int &b){
 	int tmp = 0;
