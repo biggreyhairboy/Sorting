@@ -70,6 +70,7 @@ void MergeSorting(int* arr, int begin, int flag, int end){
 			pr.PrintArray(arr);
 		}
 	}
+
 }
 void Exchange(int &a, int &b){
 	int tmp = 0;
