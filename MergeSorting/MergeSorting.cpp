@@ -68,6 +68,7 @@ void MergeSorting(int* arr, int begin, int flag, int end){
 			j++;
 		}
 	}
+
 }
 void Exchange(int &a, int &b){
 	int tmp = 0;
