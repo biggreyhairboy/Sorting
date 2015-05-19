@@ -62,10 +62,12 @@ void MergeSorting(int* arr, int begin, int flag, int end){
 		if (LeftArray[i] <= RightArray[j]){
 			arr[k] = LeftArray[i];
 			i++;
+			pr.PrintArray(arr);
 		}
 		else {
 			arr[k] = RightArray[j];
 			j++;
+			pr.PrintArray(arr);
 		}
 	}
 }
